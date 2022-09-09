@@ -33,11 +33,9 @@ const  DUMMY_EXPENSES = [
   
       },
     ];
-    
+
 function App(props) {
  // console.log(props.sample)
-
- 
 
   /* how jsx convert our template
 return React.createElement(
@@ -49,16 +47,20 @@ return React.createElement(
   );
 */
    
-  const addExpenseHandler = (expense) => {
-    console.log("In app.js");
-    console.log(expense);
-  }
+const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const addExpenseHandler = (expense) => {    
+    // console.log("In app.js",expense);
+    setExpenses((preExpense) =>{
+     return [expense, ...preExpense];
+    });
+  };
 
   return (
     <div className = "App">
       {/* <h2>Expense Tracker</h2> */}
       <NewExpense  onAddExpense = {addExpenseHandler} />
-      <Expenses items ={DUMMY_EXPENSES} />
+      <Expenses items = {expenses} />
     </div>
   );
  

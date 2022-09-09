@@ -23,6 +23,7 @@ function ExpenseItem(props) {
         console.log(title);
     }
    */ 
+//   console.log(props.date);
     return (
         <Card className='expense-item'>
             {/* <div>{ props.date.toISOString() }</div> */}
