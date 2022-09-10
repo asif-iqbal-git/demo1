@@ -32,7 +32,7 @@ By Using single useState hook
     const amountChangeHanler = (event) => {
         setEnteredAmount(event.target.value);
     };
-    const dateChangeHandler = (event) => {
+    const dateChangeHandler = (event) => {        
         setEnteredDate(event.target.value);
     };
 
@@ -42,7 +42,7 @@ By Using single useState hook
         const expenseData = {
             title:enteredTitle,
             amount:enteredAmount,
-            date: new Date(enteredDate)
+            date: new Date(enteredDate) //change format
         }
         console.log("ExpenseForm.js", expenseData);
         //require for reset form.
@@ -80,6 +80,7 @@ By Using single useState hook
                             min="2019-01-01"  
                             max="2022-12-31" 
                             value={enteredDate}
+                            
                             onChange={dateChangeHandler}/>
                     </div>
               
