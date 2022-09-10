@@ -1,4 +1,4 @@
- 
+ //https://www.appsloveworld.com/reactjs/100/48/typeerror-cannot-read-properties-of-undefined-reading-tolocalestring
 function ExpenseDate(props){
 
    const month = props && props.date && props.date.toLocaleString('en-us', {month:'long'}) ;
